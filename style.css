@@ -43,7 +43,14 @@ nav a:hover {
     color: #ccc;
 }
 
-/* Homepage Book Grid */
+/* Homepage Specific Styles */
+main h2 { /* Style for "My Books" heading on homepage */
+    text-align: center;
+    color: #eee;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
@@ -56,9 +63,16 @@ nav a:hover {
     height: auto;
     display: block; /* Remove extra space below image */
     border: 1px solid #444; /* Optional subtle border */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
 }
 
-/* Books Page Details */
+.book-item a:hover img {
+    transform: scale(1.03); /* Slightly enlarge image on hover */
+    border-color: #777;
+}
+
+
+/* Books Page Specific Styles */
 .book-detail {
     display: flex; /* Arrange info and image side-by-side */
     flex-wrap: wrap; /* Allow wrapping on small screens */
@@ -80,24 +94,44 @@ nav a:hover {
 .book-image {
     flex: 1; /* Allow image block to take less space */
     min-width: 150px;
+    text-align: center; /* Center image within its container */
 }
 
 .book-detail img {
      width: 100%;
      height: auto;
      max-width: 250px; /* Limit image size */
-     display: block;
-     margin: 0 auto; /* Center image if it wraps */
+     display: inline-block; /* Allows text-align center to work */
+     vertical-align: top; /* Align top with text */
 }
 
- .book-detail h2 {
+ .book-detail h2 { /* Book titles on books page */
     margin-top: 0;
     color: #4a90e2;
-}
+    font-size: 1.6em; /* Make book titles larger */
+ }
 
- .book-detail a {
+ /* Style for the first descriptive paragraph */
+ .book-tagline {
+   color: #4a90e2; /* Use the same blue as the headings */
+   font-size: 1.3em; /* Make it larger than normal text */
+   font-weight: bold; /* Make it bold */
+   margin-bottom: 1em;
+   line-height: 1.4; /* Adjust line height for larger font */
+ }
+
+/* Default style for other paragraphs within book-info */
+ .book-info p {
+    margin-bottom: 0.8em;
+    color: #ccc; /* Slightly lighter than main text */
+ }
+
+ .book-detail a { /* Amazon link style */
     color: #87ceeb; /* Lighter blue for links */
     text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Allows margin */
+    margin-top: 10px;
  }
  .book-detail a:hover {
     text-decoration: underline;
@@ -113,7 +147,9 @@ footer {
 }
  footer a {
     color: #aaa;
+    text-decoration: none;
  }
  footer a:hover {
     color: #ccc;
+    text-decoration: underline;
  }
