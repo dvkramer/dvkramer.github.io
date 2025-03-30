@@ -53,8 +53,9 @@ main h2 { /* Style for "My Books" heading on homepage */
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
+    /* Further increased minimum item width */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px; /* Increased gap for larger items */
     margin-top: 20px;
 }
 
@@ -93,14 +94,15 @@ main h2 { /* Style for "My Books" heading on homepage */
 
 .book-image {
     flex: 1; /* Allow image block to take less space */
-    min-width: 150px;
+    min-width: 150px; /* Container min-width */
     text-align: center; /* Center image within its container */
 }
 
 .book-detail img {
      width: 100%;
      height: auto;
-     max-width: 250px; /* Limit image size */
+     /* Further increased max-width */
+     max-width: 450px;
      display: inline-block; /* Allows text-align center to work */
      vertical-align: top; /* Align top with text */
 }
@@ -112,18 +114,19 @@ main h2 { /* Style for "My Books" heading on homepage */
  }
 
  /* Style for the first descriptive paragraph */
- .book-tagline {
-   color: #4a90e2; /* Use the same blue as the headings */
-   font-size: 1.3em; /* Make it larger than normal text */
-   font-weight: bold; /* Make it bold */
+ /* USE MORE SPECIFIC SELECTOR TO OVERRIDE .book-info p */
+ .book-info .book-tagline {
+   color: #4a90e2;
+   font-size: 1.3em;
+   font-weight: bold;
    margin-bottom: 1em;
-   line-height: 1.4; /* Adjust line height for larger font */
+   line-height: 1.4;
  }
 
 /* Default style for other paragraphs within book-info */
  .book-info p {
     margin-bottom: 0.8em;
-    color: #ccc; /* Slightly lighter than main text */
+    color: #ccc; /* Apply grey color to all p tags in book-info by default */
  }
 
  .book-detail a { /* Amazon link style */
