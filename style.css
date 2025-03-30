@@ -53,7 +53,7 @@ main h2 { /* Style for "My Books" heading on homepage */
 
 .book-grid {
     display: grid;
-    /* Further increased minimum item width */
+    /* Grid size for homepage images */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px; /* Increased gap for larger items */
     margin-top: 20px;
@@ -99,10 +99,10 @@ main h2 { /* Style for "My Books" heading on homepage */
 }
 
 .book-detail img {
-     width: 100%;
+     width: 160%;
      height: auto;
-     /* Further increased max-width */
-     max-width: 450px;
+     /* Match the homepage grid base size */
+     max-width: 1000px; /* <--- ADJUSTED VALUE */
      display: inline-block; /* Allows text-align center to work */
      vertical-align: top; /* Align top with text */
 }
