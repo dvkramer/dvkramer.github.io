@@ -1,0 +1,119 @@
+body {
+    background-color: #222; /* Dark grey background */
+    color: #eee; /* Light grey text */
+    font-family: sans-serif; /* Basic sans-serif font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, main, footer {
+    max-width: 900px; /* Limit content width */
+    margin: 20px auto; /* Center content */
+    padding: 0 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #4a90e2; /* Blueish title color */
+    margin-bottom: 10px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Homepage Book Grid */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+    border: 1px solid #444; /* Optional subtle border */
+}
+
+/* Books Page Details */
+.book-detail {
+    display: flex; /* Arrange info and image side-by-side */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 30px; /* Space between text and image */
+    margin-bottom: 40px; /* Space between book sections */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444; /* Separator line */
+}
+
+ .book-detail:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.book-info {
+    flex: 2; /* Allow text block to take more space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.book-image {
+    flex: 1; /* Allow image block to take less space */
+    min-width: 150px;
+}
+
+.book-detail img {
+     width: 100%;
+     height: auto;
+     max-width: 250px; /* Limit image size */
+     display: block;
+     margin: 0 auto; /* Center image if it wraps */
+}
+
+ .book-detail h2 {
+    margin-top: 0;
+    color: #4a90e2;
+}
+
+ .book-detail a {
+    color: #87ceeb; /* Lighter blue for links */
+    text-decoration: none;
+ }
+ .book-detail a:hover {
+    text-decoration: underline;
+ }
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+ footer a {
+    color: #aaa;
+ }
+ footer a:hover {
+    color: #ccc;
+ }
