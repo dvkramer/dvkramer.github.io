@@ -1,0 +1,158 @@
+body {
+    background-color: #222; /* Dark grey background */
+    color: #eee; /* Light grey text */
+    font-family: sans-serif; /* Basic sans-serif font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, main, footer {
+    max-width: 900px; /* Limit content width */
+    margin: 20px auto; /* Center content */
+    padding: 0 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #4a90e2; /* Blueish title color */
+    margin-bottom: 10px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Homepage Specific Styles */
+main h2 { /* Style for "My Books" heading on homepage */
+    text-align: center;
+    color: #eee;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.book-grid {
+    display: grid;
+    /* Further increased minimum item width */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px; /* Increased gap for larger items */
+    margin-top: 20px;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+    border: 1px solid #444; /* Optional subtle border */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.book-item a:hover img {
+    transform: scale(1.03); /* Slightly enlarge image on hover */
+    border-color: #777;
+}
+
+
+/* Books Page Specific Styles */
+.book-detail {
+    display: flex; /* Arrange info and image side-by-side */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 30px; /* Space between text and image */
+    margin-bottom: 40px; /* Space between book sections */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444; /* Separator line */
+}
+
+ .book-detail:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.book-info {
+    flex: 2; /* Allow text block to take more space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.book-image {
+    flex: 1; /* Allow image block to take less space */
+    min-width: 150px; /* Container min-width */
+    text-align: center; /* Center image within its container */
+}
+
+.book-detail img {
+     width: 100%;
+     height: auto;
+     /* Further increased max-width */
+     max-width: 450px;
+     display: inline-block; /* Allows text-align center to work */
+     vertical-align: top; /* Align top with text */
+}
+
+ .book-detail h2 { /* Book titles on books page */
+    margin-top: 0;
+    color: #4a90e2;
+    font-size: 1.6em; /* Make book titles larger */
+ }
+
+ /* Style for the first descriptive paragraph */
+ /* USE MORE SPECIFIC SELECTOR TO OVERRIDE .book-info p */
+ .book-info .book-tagline {
+   color: #4a90e2;
+   font-size: 1.3em;
+   font-weight: bold;
+   margin-bottom: 1em;
+   line-height: 1.4;
+ }
+
+/* Default style for other paragraphs within book-info */
+ .book-info p {
+    margin-bottom: 0.8em;
+    color: #ccc; /* Apply grey color to all p tags in book-info by default */
+ }
+
+ .book-detail a { /* Amazon link style */
+    color: #87ceeb; /* Lighter blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; /* Allows margin */
+    margin-top: 10px;
+ }
+ .book-detail a:hover {
+    text-decoration: underline;
+ }
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+ footer a {
+    color: #aaa;
+    text-decoration: none;
+ }
+ footer a:hover {
+    color: #ccc;
+    text-decoration: underline;
+ }
