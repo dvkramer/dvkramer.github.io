@@ -76,7 +76,7 @@ main h2 { /* Style for "My Books" heading on homepage */
 
 /* Books Page Specific Styles */
 .book-detail {
-    display: flex; /* Arrange info and image side-by-side */
+    display: flex; /* Arrange info and image side-by-side (Desktop default) */
     flex-wrap: wrap; /* Allow wrapping on small screens */
     gap: 30px; /* Space between text and image */
     margin-bottom: 40px; /* Space between book sections */
@@ -240,7 +240,7 @@ footer {
     }
 
     .book-image {
-        order: -1; /* Optional: Place image *before* text when stacked */
+        /* REMOVED order: -1; to keep text above image on mobile */
         text-align: center; /* Center the image container's content */
         flex: 1 1 auto; /* Reset flex properties for column layout */
         min-width: initial; /* Reset min-width */
