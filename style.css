@@ -1,22 +1,21 @@
-/* --- Base Styles (Desktop First) --- */
 body {
-    background-color: #222; /* Dark grey background */
-    color: #eee; /* Light grey text */
-    font-family: sans-serif; /* Basic sans-serif font */
+    background-color: #222;
+    color: #eee;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 header, main, footer {
-    max-width: 900px; /* Limit content width */
-    margin: 20px auto; /* Center content */
+    max-width: 900px;
+    margin: 20px auto;
     padding: 0 20px;
 }
 
 header h1 {
     text-align: center;
-    color: #4a90e2; /* Blueish title color */
+    color: #4a90e2;
     margin-bottom: 10px;
 }
 
@@ -44,8 +43,7 @@ nav a:hover {
     color: #ccc;
 }
 
-/* Homepage Specific Styles */
-main h2 { /* Style for "My Books" heading on homepage */
+main h2 {
     text-align: center;
     color: #eee;
     margin-top: 40px;
@@ -54,93 +52,88 @@ main h2 { /* Style for "My Books" heading on homepage */
 
 .book-grid {
     display: grid;
-    /* Grid size for homepage images */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px; /* Increased gap for larger items */
+    gap: 30px;
     margin-top: 20px;
 }
 
 .book-item img {
     width: 100%;
     height: auto;
-    display: block; /* Remove extra space below image */
-    border: 1px solid #444; /* Optional subtle border */
-    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    display: block;
+    border: 1px solid #444;
+    transition: transform 0.2s ease-in-out;
 }
 
 .book-item a:hover img {
-    transform: scale(1.03); /* Slightly enlarge image on hover */
+    transform: scale(1.03);
     border-color: #777;
 }
 
-
-/* Books Page Specific Styles */
 .book-detail {
-    display: flex; /* Arrange info and image side-by-side (Desktop default) */
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-    gap: 30px; /* Space between text and image */
-    margin-bottom: 40px; /* Space between book sections */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 30px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #444; /* Separator line */
+    border-bottom: 1px solid #444;
+}
+.book-detail:last-child {
+    border-bottom: none;
 }
 
- .book-detail:last-child {
-    border-bottom: none; /* Remove border from last item */
+.book-info-top {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    color: #ccc;
 }
-
-.book-info {
-    flex: 2; /* Allow text block to take more space */
-    min-width: 300px; /* Minimum width before wrapping */
-}
-
 .book-image {
-    flex: 1; /* Allow image block to take less space */
-    min-width: 150px; /* Container min-width */
-    text-align: center; /* Center image within its container */
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    text-align: center;
+    align-self: start;
+}
+.book-info-bottom {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    color: #ccc;
 }
 
-.book-detail img {
-     /* WARNING: width: 160% might cause overflow issues even on desktop */
-     /* Consider using max-width: 100% and maybe a fixed width/height instead */
-     width: 160%;
-     height: auto;
-     max-width: 1000px; /* Max size limit */
-     display: inline-block; /* Allows text-align center to work */
-     vertical-align: top; /* Align top with text */
-}
-
- .book-detail h2 { /* Book titles on books page */
+.book-detail h2 {
     margin-top: 0;
     color: #4a90e2;
-    font-size: 1.6em; /* Make book titles larger */
- }
-
- /* Style for the first descriptive paragraph (tagline) */
- .book-info .book-tagline {
+    font-size: 1.6em;
+}
+.book-info-top .book-tagline {
    color: #4a90e2;
    font-size: 1.3em;
    font-weight: bold;
    margin-bottom: 1em;
    line-height: 1.4;
- }
-
-/* Default style for other paragraphs within book-info */
- .book-info p {
+}
+.book-info-bottom p {
     margin-bottom: 0.8em;
-    color: #ccc; /* Apply grey color to all p tags in book-info by default */
- }
-
- .book-detail a { /* Amazon link style */
-    color: #87ceeb; /* Lighter blue for links */
+    color: #ccc;
+}
+.book-info-bottom a {
+    color: #87ceeb;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block; /* Allows margin */
+    display: inline-block;
     margin-top: 10px;
- }
- .book-detail a:hover {
+}
+.book-info-bottom a:hover {
     text-decoration: underline;
- }
+}
 
+.book-detail img {
+     width: 160%;
+     height: auto;
+     max-width: 1000px;
+     display: inline-block;
+     vertical-align: top;
+}
 
 footer {
     text-align: center;
@@ -149,17 +142,15 @@ footer {
     border-top: 1px solid #444;
     color: #aaa;
 }
- footer a {
+footer a {
     color: #aaa;
     text-decoration: none;
- }
- footer a:hover {
+}
+footer a:hover {
     color: #ccc;
     text-decoration: underline;
- }
+}
 
-
-/* Projects Page Specific Styles */
 .projects-section {
     margin-bottom: 40px;
     padding-bottom: 20px;
@@ -182,12 +173,12 @@ footer {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax as needed */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
 .project-item {
-    background-color: #333; /* Slightly lighter background for project items */
+    background-color: #333;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #444;
@@ -205,7 +196,7 @@ footer {
 }
 
 .project-item a {
-    color: #66b3ff; /* Updated to a softer blue - for project links */
+    color: #66b3ff;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -216,95 +207,76 @@ footer {
     text-decoration: underline;
 }
 
-/* --- Responsive Adjustments --- */
-
-/* Target tablets and smaller devices */
 @media (max-width: 768px) {
 
-    /* General Layout Adjustments */
     header, main, footer {
-        padding: 0 15px; /* Reduce side padding */
+        padding: 0 15px;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 
     nav a {
-        margin: 0 8px; /* Reduce space between nav links */
-        font-size: 1em; /* Slightly smaller nav text */
+        margin: 0 8px;
+        font-size: 1em;
     }
 
-    /* Books Page: Stack book image and text vertically */
     .book-detail {
-        flex-direction: column; /* Stack image and text */
-        gap: 20px; /* Adjust gap for vertical layout */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
     }
 
+    .book-info-top,
+    .book-image,
+    .book-info-bottom {
+        grid-column: unset;
+        grid-row: unset;
+        min-width: initial;
+        align-self: auto;
+    }
+
+    .book-info-top {
+        order: 1;
+    }
     .book-image {
-        /* REMOVED order: -1; to keep text above image on mobile */
-        text-align: center; /* Center the image container's content */
-        flex: 1 1 auto; /* Reset flex properties for column layout */
-        min-width: initial; /* Reset min-width */
-        margin-bottom: 10px; /* Add some space below the image */
+        order: 2;
+        margin-bottom: 0;
+    }
+    .book-info-bottom {
+        order: 3;
     }
 
     .book-detail img {
-        /* Override the problematic desktop width */
-        width: auto; /* Let height control width based on aspect ratio */
-        max-width: 75%; /* Max width relative to its container */
-        /* Or use a fixed max width like: max-width: 300px; */
-        height: auto; /* Maintain aspect ratio */
-        display: inline-block; /* Respect text-align: center */
+        width: auto;
+        max-width: 75%;
+        height: auto;
+        display: inline-block;
         vertical-align: middle;
-        /* Remove transform effect on mobile if desired */
-        /* transition: none; */
     }
 
-    .book-info {
-        flex: 1 1 auto; /* Reset flex properties for column layout */
-        min-width: initial; /* Reset min-width */
-    }
-
-    .book-detail h2 { /* Book titles slightly smaller */
+     .book-detail h2 {
        font-size: 1.4em;
     }
-
-    .book-info .book-tagline { /* Tagline slightly smaller */
+    .book-info-top .book-tagline {
       font-size: 1.15em;
     }
 
-    /* Project Grid: Adjust columns for slightly smaller screens if needed */
-    /* The default `minmax(300px, 1fr)` is usually okay, but uncomment if needed */
-    /*
-    .project-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    */
+}
 
-    /* Homepage Book Grid: Adjust if 400px feels too big in single column */
-    /* The default `minmax(400px, 1fr)` is usually okay, but uncomment if needed */
-    /*
-    .book-grid {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-    */
-
-} /* End of @media (max-width: 768px) */
-
-
-/* Optional: Further adjustments for very small screens */
 @media (max-width: 480px) {
 
     header, main, footer {
-        padding: 0 10px; /* Even less padding */
+        padding: 0 10px;
     }
 
     nav a {
-        margin: 0 5px; /* Tighter nav spacing */
+        margin: 0 5px;
     }
 
-     /* Ensure project items dont feel too wide */
     .project-grid {
-        grid-template-columns: 1fr; /* Force single column */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -312,22 +284,20 @@ footer {
         padding: 15px;
     }
 
-    /* Ensure homepage book items dont feel too wide */
     .book-grid {
-         grid-template-columns: 1fr; /* Force single column */
+         grid-template-columns: 1fr;
          gap: 20px;
     }
 
     .book-detail img {
-        max-width: 90%; /* Allow slightly larger percentage on very small screens */
-        /* Or maybe a smaller fixed width: max-width: 250px; */
+        max-width: 90%;
     }
 
      .book-detail h2 {
-       font-size: 1.3em; /* Smaller title */
+       font-size: 1.3em;
     }
-    .book-info .book-tagline {
-      font-size: 1.1em; /* Smaller tagline */
+    .book-info-top .book-tagline {
+      font-size: 1.1em;
     }
 
-} /* End of @media (max-width: 480px) */
+}
