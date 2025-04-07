@@ -1,3 +1,4 @@
+/* --- Base Styles (Desktop First) --- */
 body {
     background-color: #222; /* Dark grey background */
     color: #eee; /* Light grey text */
@@ -99,10 +100,11 @@ main h2 { /* Style for "My Books" heading on homepage */
 }
 
 .book-detail img {
+     /* WARNING: width: 160% might cause overflow issues even on desktop */
+     /* Consider using max-width: 100% and maybe a fixed width/height instead */
      width: 160%;
      height: auto;
-     /* Match the homepage grid base size */
-     max-width: 1000px; /* <--- ADJUSTED VALUE */
+     max-width: 1000px; /* Max size limit */
      display: inline-block; /* Allows text-align center to work */
      vertical-align: top; /* Align top with text */
 }
@@ -113,8 +115,7 @@ main h2 { /* Style for "My Books" heading on homepage */
     font-size: 1.6em; /* Make book titles larger */
  }
 
- /* Style for the first descriptive paragraph */
- /* USE MORE SPECIFIC SELECTOR TO OVERRIDE .book-info p */
+ /* Style for the first descriptive paragraph (tagline) */
  .book-info .book-tagline {
    color: #4a90e2;
    font-size: 1.3em;
@@ -214,3 +215,119 @@ footer {
 .project-item a:hover {
     text-decoration: underline;
 }
+
+/* --- Responsive Adjustments --- */
+
+/* Target tablets and smaller devices */
+@media (max-width: 768px) {
+
+    /* General Layout Adjustments */
+    header, main, footer {
+        padding: 0 15px; /* Reduce side padding */
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    nav a {
+        margin: 0 8px; /* Reduce space between nav links */
+        font-size: 1em; /* Slightly smaller nav text */
+    }
+
+    /* Books Page: Stack book image and text vertically */
+    .book-detail {
+        flex-direction: column; /* Stack image and text */
+        gap: 20px; /* Adjust gap for vertical layout */
+    }
+
+    .book-image {
+        order: -1; /* Optional: Place image *before* text when stacked */
+        text-align: center; /* Center the image container's content */
+        flex: 1 1 auto; /* Reset flex properties for column layout */
+        min-width: initial; /* Reset min-width */
+        margin-bottom: 10px; /* Add some space below the image */
+    }
+
+    .book-detail img {
+        /* Override the problematic desktop width */
+        width: auto; /* Let height control width based on aspect ratio */
+        max-width: 75%; /* Max width relative to its container */
+        /* Or use a fixed max width like: max-width: 300px; */
+        height: auto; /* Maintain aspect ratio */
+        display: inline-block; /* Respect text-align: center */
+        vertical-align: middle;
+        /* Remove transform effect on mobile if desired */
+        /* transition: none; */
+    }
+
+    .book-info {
+        flex: 1 1 auto; /* Reset flex properties for column layout */
+        min-width: initial; /* Reset min-width */
+    }
+
+    .book-detail h2 { /* Book titles slightly smaller */
+       font-size: 1.4em;
+    }
+
+    .book-info .book-tagline { /* Tagline slightly smaller */
+      font-size: 1.15em;
+    }
+
+    /* Project Grid: Adjust columns for slightly smaller screens if needed */
+    /* The default `minmax(300px, 1fr)` is usually okay, but uncomment if needed */
+    /*
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    */
+
+    /* Homepage Book Grid: Adjust if 400px feels too big in single column */
+    /* The default `minmax(400px, 1fr)` is usually okay, but uncomment if needed */
+    /*
+    .book-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    */
+
+} /* End of @media (max-width: 768px) */
+
+
+/* Optional: Further adjustments for very small screens */
+@media (max-width: 480px) {
+
+    header, main, footer {
+        padding: 0 10px; /* Even less padding */
+    }
+
+    nav a {
+        margin: 0 5px; /* Tighter nav spacing */
+    }
+
+     /* Ensure project items dont feel too wide */
+    .project-grid {
+        grid-template-columns: 1fr; /* Force single column */
+        gap: 20px;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+
+    /* Ensure homepage book items dont feel too wide */
+    .book-grid {
+         grid-template-columns: 1fr; /* Force single column */
+         gap: 20px;
+    }
+
+    .book-detail img {
+        max-width: 90%; /* Allow slightly larger percentage on very small screens */
+        /* Or maybe a smaller fixed width: max-width: 250px; */
+    }
+
+     .book-detail h2 {
+       font-size: 1.3em; /* Smaller title */
+    }
+    .book-info .book-tagline {
+      font-size: 1.1em; /* Smaller tagline */
+    }
+
+} /* End of @media (max-width: 480px) */
