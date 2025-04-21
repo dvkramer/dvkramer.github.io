@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* --- START OF ORIGINAL CSS (UNCHANGED FROM YOUR FIRST POST) --- */
 body {
     background-color: #222;
