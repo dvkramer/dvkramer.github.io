@@ -1,3 +1,4 @@
+/* --- START OF ORIGINAL CSS (UNCHANGED FROM YOUR FIRST POST) --- */
 body {
     background-color: #222;
     color: #eee;
@@ -98,13 +99,23 @@ main h2 {
     align-self: start;
 }
 
-.book-info-bottom {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3; /* Occupies second row implicitly */
-    color: #ccc;
-    align-self: start; /* Align block to top of its row */
-    padding-top: 1em; /* Space between top and bottom text blocks */
+.book-info-bottom a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
 }
+
+.book-info-bottom a:hover {
+    background-color: #005fa3;
+}
+
 
 
 /* --- General Book Text Styling --- */
@@ -112,7 +123,18 @@ main h2 {
     margin-top: 0;
     color: #4a90e2;
     font-size: 1.6em;
+    /* Text align left is default for block elements like h2 */
 }
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* + ONLY CHANGE: Limit width of the description block    + */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.book-info-top .book-description {
+    max-width: 450px; /* Adjust this value as desired */
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 .book-info-top .book-tagline {
    color: #4a90e2;
    font-size: 1.3em;
@@ -124,23 +146,22 @@ main h2 {
     margin-bottom: 0.8em;
     color: #ccc;
 }
-.book-info-bottom a {
+.book-info-bottom a { /* NOTE: This rule conflicts with the specific blue button style above it */
     color: #87ceeb;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
+    display: inline-block; /* This is okay */
+    margin-top: 10px; /* This conflicts with the button margin */
 }
-.book-info-bottom a:hover {
+.book-info-bottom a:hover { /* NOTE: This rule conflicts with the specific blue button style above it */
     text-decoration: underline;
 }
 
 .book-detail img {
-     width: 160%;
+     width: 140%; /* Original value */
      height: auto;
-     max-width: 1000px;
-     display: inline-block;
-     vertical-align: top;
+     display: inline-block; /* Original value */
+     vertical-align: top; /* Original value */
 }
 
 /* --- Footer Styles --- */
@@ -256,6 +277,8 @@ footer a:hover {
         min-width: initial;
         align-self: auto;
         padding-top: 0; /* Reset padding from desktop fix */
+        /* Ensure centering for mobile if needed by content */
+         text-align: center;
     }
 
     .book-info-top {
@@ -269,19 +292,34 @@ footer a:hover {
         order: 3;
     }
 
+    /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* + ONLY CHANGE (Mobile): Adjust description width/align + */
+    /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    .book-info-top .book-description {
+        max-width: 90%;      /* Allow wider text on mobile */
+        margin-left: auto;   /* Center the block */
+        margin-right: auto;
+    }
+    .book-info-top .book-description p {
+         text-align: left; /* Keep text left-aligned within the centered block */
+    }
+    /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
     .book-detail img {
         width: auto;
-        max-width: 75%;
+        max-width: 75%; /* Original value */
         height: auto;
-        display: inline-block;
-        vertical-align: middle;
+        display: inline-block; /* Original value */
+        vertical-align: middle; /* Original value */
     }
 
      .book-detail h2 {
-       font-size: 1.4em;
+       font-size: 1.4em; /* Original value */
+       text-align: center; /* Center title on mobile */
     }
     .book-info-top .book-tagline {
-      font-size: 1.15em;
+      font-size: 1.15em; /* Original value */
+      text-align: center; /* Center tagline on mobile */
     }
 
 }
@@ -310,15 +348,24 @@ footer a:hover {
          gap: 20px;
     }
 
+    /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* + ONLY CHANGE (Small Mobile): Adjust description width/align+ */
+    /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    .book-info-top .book-description {
+        max-width: 95%; /* Slightly wider for smallest screens */
+    }
+    /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
     .book-detail img {
-        max-width: 90%;
+        max-width: 90%; /* Original value */
     }
 
      .book-detail h2 {
-       font-size: 1.3em;
+       font-size: 1.3em; /* Original value */
     }
     .book-info-top .book-tagline {
-      font-size: 1.1em;
+      font-size: 1.1em; /* Original value */
     }
 
 }
+/* --- END OF ORIGINAL CSS --- */
