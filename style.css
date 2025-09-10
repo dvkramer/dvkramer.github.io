@@ -75,8 +75,12 @@ nav a:hover {
     letter-spacing: 0.01em;
 }
 
+.above-the-fold {
+    min-height: 100vh;
+}
+
 .books-section {
-    margin: 200px 0;
+    margin: 40px 0;
     text-align: center;
 }
 
