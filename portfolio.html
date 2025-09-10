@@ -3,184 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://dvkramer.github.io/portfolio">
-    <!-- Meta description updated to include KramerSearch and Kramer Intelligence -->
-    <meta name="description" content="Explore the portfolio of Daniel Vincent Kramer, including Microsoft Edge extensions, open-source software, the KramerSearch engine, and the Kramer Intelligence AI assistant.">
     <title>Portfolio - Daniel Vincent Kramer</title>
+    <link rel="canonical" href="https://dvkramer.github.io/portfolio">
+    <meta name="description" content="Explore the portfolio of Daniel Vincent Kramer, including Microsoft Edge extensions, open-source software, the KramerSearch engine, and the Kramer Intelligence AI assistant.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Daniel Vincent Kramer</h1>
-        <nav>
-            <!-- FIXED links to use clean URLs -->
-            <a href="/">Home</a>
-            <a href="/books">Books</a>
-            <a href="/portfolio">Portfolio</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/books">Books</a>
+                <a href="/portfolio" style="color: #4A9EFF;">Portfolio</a>
+            </nav>
+            <h1 class="main-title">My Portfolio</h1>
+        </header>
 
-    <main>
-        <!-- SECTION ORDER UPDATED: Web Applications & AI moved to top -->
-        <section id="web-applications" class="projects-section">
-            <h2>Web Applications</h2>
-            <p>Explore web applications I have developed.</p>
+        <main>
+            <section id="web-applications" class="projects-section">
+                <h2>Web Applications</h2>
+                <p>Explore web applications I have developed.</p>
 
-            <div class="project-grid">
-                <!-- Kramer Intelligence -->
-                <div class="project-item">
-                    <h3>Kramer Intelligence</h3>
-                    <p>An advanced AI assistant built to answer questions, assist with tasks, and explore the capabilities of artificial intelligence.</p>
-                    <a href="https://kramer-intelligence.vercel.app/">Visit Kramer Intelligence</a>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <h3>Kramer Intelligence</h3>
+                        <p>An advanced AI assistant built to answer questions, assist with tasks, and explore the capabilities of artificial intelligence.</p>
+                        <a href="https://kramer-intelligence.vercel.app/">Visit Kramer Intelligence</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Kramer Intelligent Cloud Write</h3>
+                        <p>A word processor built for the modern web.</p>
+                        <a href="https://kic-write.vercel.app/">Visit Kramer Intelligent Cloud Write</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>KramerSearch</h3>
+                        <p>A custom search engine. Fast and minimal.</p>
+                        <a href="https://kramer-search.vercel.app/">Visit KramerSearch</a>
+                    </div>
                 </div>
+            </section>
 
-                <!-- Kramer Intelligent Cloud Write -->
-                <div class="project-item">
-                    <h3>Kramer Intelligent Cloud Write</h3>
-                    <p>A word processor built for the modern web.</p>
-                    <a href="https://kic-write.vercel.app/">Visit Kramer Intelligent Cloud Write</a>
+            <section id="open-source-software" class="projects-section">
+                <h2>Open Source Software</h2>
+                <p>My open-source software projects. Feel free to explore the code, contribute, or use them as-is.</p>
+
+                <div class="project-grid">
+                    <div class="project-item">
+                        <h3>Kramer Browser</h3>
+                        <p>A Windows browser built on Chromium.</p>
+                        <a href="https://github.com/dvkramer/Kramer-Browser">View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Kramer UI for Ollama</h3>
+                        <p>A lightweight UI for chatting with LLMs through Ollama.</p>
+                        <a href="https://github.com/dvkramer/kramer-ui">View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>AI Terminal</h3>
+                        <p>An AI agent that can execute tasks on your PC using PowerShell.</p>
+                        <a href="https://github.com/dvkramer/ai-terminal">View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Fire Drill for Windows</h3>
+                        <p>A Windows application designed to enhance fire safety preparedness by simulating surprise fire drills.</p>
+                        <a href="https://github.com/dvkramer/fire-drill-windows">View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Satya Nadella Thoughtful & Empathetic Companion for Windows</h3>
+                        <p>This program brings the steady presence of Microsoft’s CEO directly to your desktop.</p>
+                        <a href="https://github.com/dvkramer/satya-nadella-companion">View on GitHub</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Predictive File Cleaner</h3>
+                        <p>A Windows utility that helps you identify old and unwanted documents that may be candidates for deletion.</p>
+                        <a href="https://github.com/dvkramer/File-Cleaner">View on GitHub</a>
+                    </div>
                 </div>
+            </section>
 
-                <!-- KramerSearch -->
-                <div class="project-item">
-                    <h3>KramerSearch</h3>
-                    <p>A custom search engine. Fast and minimal.</p>
-                    <a href="https://kramer-search.vercel.app/">Visit KramerSearch</a>
+            <section id="edge-extensions" class="projects-section">
+                <h2>Edge Extensions</h2>
+                <p>Enhance your browsing experience with these Microsoft Edge extensions I've developed. Click on each extension to visit their respective store pages.</p>
+
+                <div class="project-grid">
+                    <div class="project-item">
+                        <h3>Gemini Omnibox</h3>
+                        <p>Access Gemini straight from your omnibox.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/gemini-omnibox/plmbdhkfdkchabenbcblfcceblcmedmo">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Reddit Thread Finder</h3>
+                        <p>Finds and navigates to a Reddit thread linking to the current page.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/reddit-thread-finder/baeaebdolagmdaonjbfiodkdafbmjgpg">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Bouncing DVD Screensaver</h3>
+                        <p>Replaces new tab page with a bouncing DVD screensaver.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/bouncing-dvd-screensaver/fcgmcmbbdenbifkbenofiedhfngklhda">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Hurricane Alert</h3>
+                        <p>Tracks active hurricanes in the Atlantic and Caribbean.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/hurricane-alert/ccchchnbmlfckffnemhpcnlfgjoicpgp">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Founder Fuel Injector</h3>
+                        <p>Injects tech bro quotes into webpages to keep you grinding, hustling, and raising.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/founder-fuel-injector/labdpnppipoeghanfjoecdffdeboinme">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Gary Marcus Deep Learning is Hitting a Wall Companion</h3>
+                        <p>Gary Marcus reminds you about the limitations of deep learning when you use ChatGPT, Gemini, Claude, and more.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/gary-marcus-deep-learning/bibfopclhcbaiomnnemkkhooakiigile">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Tab Hoarder Intervention with Michael Dell</h3>
+                        <p>Closes all but the current tab if more than 20 tabs are open, with an intervention message from Michael Dell.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/tab-hoarder-intervention-/jopgcbgmeldmjlhpepopjfjenbojimpe">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Mark Zuckerberg Companion for Microsoft Edge</h3>
+                        <p>Mark Zuckerberg walks across your browser window. Never surf the web alone.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/mark-zuckerberg-companion/baciiodcadgnpfpbdepkimpbojpfhbfi">Add to Microsoft Edge</a>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>New Tab Roulette</h3>
+                        <p>Opening a new tab opens a random bookmark.</p>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/new-tab-roulette/lcknlpkhkgnghhfhfdbhcikcgjbhbhbc">Add to Microsoft Edge</a>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-                <!-- Add more web application / AI project items here -->
-            </div>
-        </section>
-
-        <!-- SECTION ORDER UPDATED: Open Source Software moved to middle -->
-        <section id="open-source-software" class="projects-section">
-            <h2>Open Source Software</h2>
-            <p>My open-source software projects. Feel free to explore the code, contribute, or use them as-is.</p>
-
-            <div class="project-grid">
-                <!-- Kramer Browser -->
-                <div class="project-item">
-                    <h3>Kramer Browser</h3>
-                    <p>A Windows browser built on Chromium.</p>
-                    <a href="https://github.com/dvkramer/Kramer-Browser">View on GitHub</a>
-                </div>
-
-                <!-- Kramer UI for Ollama -->
-                <div class="project-item">
-                    <h3>Kramer UI for Ollama</h3>
-                    <p>A lightweight UI for chatting with LLMs through Ollama.</p>
-                    <a href="https://github.com/dvkramer/kramer-ui">View on GitHub</a>
-                </div>
-
-                <!-- AI Terminal -->
-                <div class="project-item">
-                    <h3>AI Terminal</h3>
-                    <p>An AI agent that can execute tasks on your PC using PowerShell.</p>
-                    <a href="https://github.com/dvkramer/ai-terminal">View on GitHub</a>
-                </div>
-
-                <!-- Fire Drill for Windows -->
-                <div class="project-item">
-                    <h3>Fire Drill for Windows</h3>
-                    <p>A Windows application designed to enhance fire safety preparedness by simulating surprise fire drills.</p>
-                    <a href="https://github.com/dvkramer/fire-drill-windows">View on GitHub</a>
-                </div>
-
-                <!-- Satya Nadella Companion for Windows -->
-                <div class="project-item">
-                    <h3>Satya Nadella Thoughtful & Empathetic Companion for Windows</h3>
-                    <p>This program brings the steady presence of Microsoft’s CEO directly to your desktop.</p>
-                    <a href="https://github.com/dvkramer/satya-nadella-companion">View on GitHub</a>
-                </div>
-
-                <!-- Predictive File Cleaner -->
-                <div class="project-item">
-                    <h3>Predictive File Cleaner</h3>
-                    <p>A Windows utility that helps you identify old and unwanted documents that may be candidates for deletion.</p>
-                    <a href="https://github.com/dvkramer/File-Cleaner">View on GitHub</a>
-                </div>
-
-                <!-- Add more open source project items here -->
-            </div>
-        </section>
-
-        <!-- SECTION ORDER UPDATED: Edge Extensions moved to bottom -->
-        <section id="edge-extensions" class="projects-section">
-            <h2>Edge Extensions</h2>
-            <p>Enhance your browsing experience with these Microsoft Edge extensions I've developed. Click on each extension to visit their respective store pages.</p>
-
-            <div class="project-grid">
-                <!-- Gemini Omnibox -->
-                <div class="project-item">
-                    <h3>Gemini Omnibox</h3>
-                    <p>Access Gemini straight from your omnibox.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/gemini-omnibox/plmbdhkfdkchabenbcblfcceblcmedmo">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Reddit Thread Finder -->
-                <div class="project-item">
-                    <h3>Reddit Thread Finder</h3>
-                    <p>Finds and navigates to a Reddit thread linking to the current page.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/reddit-thread-finder/baeaebdolagmdaonjbfiodkdafbmjgpg">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Bouncing DVD Screensaver -->
-                <div class="project-item">
-                    <h3>Bouncing DVD Screensaver</h3>
-                    <p>Replaces new tab page with a bouncing DVD screensaver.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/bouncing-dvd-screensaver/fcgmcmbbdenbifkbenofiedhfngklhda">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Hurricane Alert -->
-                <div class="project-item">
-                    <h3>Hurricane Alert</h3>
-                    <p>Tracks active hurricanes in the Atlantic and Caribbean.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/hurricane-alert/ccchchnbmlfckffnemhpcnlfgjoicpgp">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Founder Fuel Injector -->
-                <div class="project-item">
-                    <h3>Founder Fuel Injector</h3>
-                    <p>Injects tech bro quotes into webpages to keep you grinding, hustling, and raising.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/founder-fuel-injector/labdpnppipoeghanfjoecdffdeboinme">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Gary Marcus Deep Learning Companion -->
-                <div class="project-item">
-                    <h3>Gary Marcus Deep Learning is Hitting a Wall Companion</h3>
-                    <p>Gary Marcus reminds you about the limitations of deep learning when you use ChatGPT, Gemini, Claude, and more.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/gary-marcus-deep-learning/bibfopclhcbaiomnnemkkhooakiigile">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Tab Hoarder Intervention with Michael Dell -->
-                <div class="project-item">
-                    <h3>Tab Hoarder Intervention with Michael Dell</h3>
-                    <p>Closes all but the current tab if more than 20 tabs are open, with an intervention message from Michael Dell.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/tab-hoarder-intervention-/jopgcbgmeldmjlhpepopjfjenbojimpe">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Mark Zuckerberg Companion -->
-                <div class="project-item">
-                    <h3>Mark Zuckerberg Companion for Microsoft Edge</h3>
-                    <p>Mark Zuckerberg walks across your browser window. Never surf the web alone.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/mark-zuckerberg-companion/baciiodcadgnpfpbdepkimpbojpfhbfi">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- New Tab Roulette -->
-                <div class="project-item">
-                    <h3>New Tab Roulette</h3>
-                    <p>Opening a new tab opens a random bookmark.</p>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/new-tab-roulette/lcknlpkhkgnghhfhfdbhcikcgjbhbhbc">Add to Microsoft Edge</a>
-                </div>
-
-                <!-- Add more Edge extension project items here if you have more -->
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Get in touch at <a href="mailto:dvkramer@outlook.com">dvkramer@outlook.com</a></p>
-    </footer>
+        <footer>
+            <p>Get in touch at <a href="mailto:dvkramer@outlook.com">dvkramer@outlook.com</a></p>
+        </footer>
+    </div>
 </body>
 </html>
